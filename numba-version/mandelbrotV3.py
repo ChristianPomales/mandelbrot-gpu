@@ -1,6 +1,8 @@
 from __future__ import print_function, division, absolute_import
 
 from timeit import default_timer as timer
+import matplotlib.pyplot as plt
+plt.switch_backend('agg')
 from matplotlib.pylab import imshow, jet, savefig, ion
 import numpy as np
 from numba import njit
