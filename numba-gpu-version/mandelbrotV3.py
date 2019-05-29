@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 plt.switch_backend('agg')
 from matplotlib.pylab import imshow, jet, savefig, ion
 import numpy as np
-from numba import njit
+from numba import cuda
 
 @cuda.jit(device=True)
 def get_color(row, col, max_iter):
@@ -33,7 +33,7 @@ def generate_mandelbrot(image):
             j = -1.0 + col * py
             color = get_color(i, j, MAX_ITER)
             image[col, row] = color
-    return image
+    #return image
 
 SIZE = 4096
 WIDTH = SIZE
