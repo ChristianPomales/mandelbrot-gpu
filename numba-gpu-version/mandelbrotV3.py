@@ -35,7 +35,7 @@ def generate_mandelbrot(image):
             image[col, row] = color
     #return image
 
-SIZE = 4096
+SIZE = 1024
 WIDTH = SIZE
 HEIGHT = SIZE
 MAX_ITER = 20
