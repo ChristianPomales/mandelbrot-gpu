@@ -1,4 +1,4 @@
-CC=gcc-9
+CC=gcc
 CFLAGS= -std=c99 -Ofast -fopenmp
 BIN=mandelbrot
 
