@@ -7,7 +7,7 @@ from matplotlib.pylab import imshow, jet, savefig, ion
 import numpy as np
 from numba import njit
 
-@njit
+@njit(parallel=True)
 def get_color(row, col, max_iter):
     color = 0
     z = 0.0j
@@ -17,7 +17,7 @@ def get_color(row, col, max_iter):
             return color
     return 255
 
-@njit
+@njit(parallel=True)
 def generate_mandelbrot(image):
     px = ((3.0) / WIDTH)
     py = ((2.0) / HEIGHT) 
